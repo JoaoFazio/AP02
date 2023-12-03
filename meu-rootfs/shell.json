@@ -1,0 +1,41 @@
+{
+    "ociVersion": "1.0.2",
+    "process": {
+      "terminal": true,
+      "user": {
+        "uid": 0,
+        "gid": 0
+      },
+      "args": [
+        "/bin/sh"
+      ]
+    },
+    "root": {
+      "path": "meu-rootfs",
+      "readonly": false
+    },
+    "hostname": "meu-container",
+    "mounts": [
+      {
+        "destination": "/proc",
+        "type": "proc",
+        "source": "proc"
+      },
+      {
+        "destination": "/dev",
+        "type": "tmpfs",
+        "source": "tmpfs"
+      },
+      {
+        "destination": "/dev/pts",
+        "type": "devpts",
+        "source": "devpts"
+      },
+      {
+        "destination": "/dev/shm",
+        "type": "tmpfs",
+        "source": "shm"
+      }
+    ]
+  }
+  
